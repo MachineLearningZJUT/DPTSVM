@@ -4,7 +4,7 @@ modelName = func2str(model);
 %% =========================================================
 % 1. load datasets
 %% =========================================================
-dataset = "noisyB";  % "noisyA" | "noisyB"
+dataset = "noisyA";  % "noisyA" | "noisyB"
 if dataset == "noisyA"
   load("noisyA.mat");
 elseif dataset == "noisyB"
@@ -55,4 +55,5 @@ fprintf('Train Accuracy = %.4f\n', acc);
 Res = Mld.test(TestData);
 acc = mean(TestData.Y==Res.PredictY);
 fprintf('Test Accuracy = %.4f\n', acc);
+
 
