@@ -7,7 +7,7 @@ This repository provides a MATLAB implementation for the paper  **Double-Side Pr
 Specifically, our DPTSVM  learns class-specific projection directions by minimizing within-class dispersion under $L_1$ criteria, while simultaneously enforcing a double-sided hinge loss to ensure that opposite-class projections lie outside a margin band centered around each class. We implement three solvers for our DPTSVM model using MM framework:
 - **QP** (Quadratic Programming via MATLAB's `quadprog`)
 - **SOR** (Successive Over-Relaxation)
-- **ADMM** (Alternating Direction Method of Multipliers fOR larger datasets)
+- **ADMM** (Alternating Direction Method of Multipliers for larger datasets)
 
 ---
 
@@ -77,3 +77,4 @@ Res = Mld.test(TestData); % test model
 ## Citation
 
 If you use this implementation in research, please cite the corresponding paper/project where DPTSVM is introduced.
+
