@@ -4,7 +4,7 @@ This repository provides a MATLAB implementation for the paper  **Double-Side Pr
 
 ## Overview
 
-Specifically, our DPTSVM  learns class-specific projection directions by minimizing within-class dispersion under $L_1$ criteria, while simultaneously enforcing a double-sided hinge loss to ensure that opposite-class projections lie outside a margin band centered around each class. We implement three solvers for our DPTSVM model under MM framework:
+The projection twin support vector machine (PTSVM) offers a powerful nonparallel learning paradigm, yet its reliance on squared $L_2$-norm criteria exacerbates sensitivity to outliers, while its one-sided margin constraints fail to capture bilateral class distributions. To overcome these limitations, a \textit{double-sided projection twin support vector machine} (DPTSVM) is proposed for robust classification. Specifically, our DPTSVM learns class-specific projection directions by minimizing within-class dispersion under $L_1$ criteria, while simultaneously enforcing a double-sided hinge loss to ensure that opposite-class projections lie outside a margin band centered around each class. We implement three solvers for our DPTSVM model under MM framework:
 - **QP** (Quadratic Programming via MATLAB's `quadprog`)
 - **SOR** (Successive Over-Relaxation)
 - **ADMM** (Alternating Direction Method of Multipliers)
@@ -77,6 +77,7 @@ Res = Mld.test(TestData); % test model
 ## Citation
 
 If you use this implementation in research, please cite the corresponding paper/project where DPTSVM is introduced.
+
 
 
 
