@@ -23,11 +23,7 @@ classdef DPTSVM < handle
       obj.c1 = getfield_def(param, 'c1', 1);
       obj.c2 = getfield_def(param, 'c2', 1);
       obj.solver = getfield_def(param, 'solver', "ADMM");
-      % obj.epsD    = getfield_def(param, 'epsD',    1e-12);
-      % obj.verbose = getfield_def(param, 'verbose', 0);
-      %   obj.c1 = param.c1;
-      %   obj.c2 = param.c2;
-      %   obj.Ker = param.Ker;
+
 
     end
 
@@ -70,10 +66,7 @@ classdef DPTSVM < handle
       else
         error('Unknown solver: %s', obj.solver);
       end
-      % obj.w{1} = obj.solveOneDirection_QP(Ak1, Bk1);
-      % obj.w{2} = obj.solveOneDirection_QP(Ak2, Bk2);
-      % obj.w{1} = obj.solveOneDirection_ADMM(Ak1, Bk1);
-      % obj.w{2} = obj.solveOneDirection_ADMM(Ak2, Bk2);
+
       Times = toc;
     end
 
@@ -542,4 +535,5 @@ function v = getfield_def(s, name, def)
   else
     v = def;
   end
+
 end
